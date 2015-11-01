@@ -1,0 +1,87 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Thepagedot.HomeMaticShutter", "Thepagedot.HomeMaticShutter", "{5F581A7C-63A9-469E-B32C-527D0536B990}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Thepagedot.HomeMaticShutter.Shared", "Thepagedot.HomeMaticShutter\Thepagedot.HomeMaticShutter.Shared\Thepagedot.HomeMaticShutter.Shared.shproj", "{4A9322BB-B5D9-4784-893E-FE7C0DB273F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thepagedot.HomeMaticShutter.WindowsPhone", "Thepagedot.HomeMaticShutter\Thepagedot.HomeMaticShutter.WindowsPhone\Thepagedot.HomeMaticShutter.WindowsPhone.csproj", "{C98F8DD3-69B1-43BA-AFF5-4AE34CC5627E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thepagedot.HomeMaticShutter.Windows", "Thepagedot.HomeMaticShutter\Thepagedot.HomeMaticShutter.Windows\Thepagedot.HomeMaticShutter.Windows.csproj", "{ABB7584A-78C2-479A-8239-E94C165FEEDD}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Thepagedot.HomeMaticShutter\Thepagedot.HomeMaticShutter.Shared\Thepagedot.HomeMaticSwitcher.Shared.projitems*{c98f8dd3-69b1-43ba-aff5-4ae34cc5627e}*SharedItemsImports = 4
+		Thepagedot.HomeMaticShutter\Thepagedot.HomeMaticShutter.Shared\Thepagedot.HomeMaticSwitcher.Shared.projitems*{4a9322bb-b5d9-4784-893e-fe7c0db273f4}*SharedItemsImports = 13
+		Thepagedot.HomeMaticShutter\Thepagedot.HomeMaticShutter.Shared\Thepagedot.HomeMaticSwitcher.Shared.projitems*{abb7584a-78c2-479a-8239-e94c165feedd}*SharedItemsImports = 4
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C98F8DD3-69B1-43BA-AFF5-4AE34CC5627E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C98F8DD3-69B1-43BA-AFF5-4AE34CC5627E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C98F8DD3-69B1-43BA-AFF5-4AE34CC5627E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C98F8DD3-69B1-43BA-AFF5-4AE34CC5627E}.Debug|ARM.ActiveCfg = Debug|ARM
+		{C98F8DD3-69B1-43BA-AFF5-4AE34CC5627E}.Debug|ARM.Build.0 = Debug|ARM
+		{C98F8DD3-69B1-43BA-AFF5-4AE34CC5627E}.Debug|ARM.Deploy.0 = Debug|ARM
+		{C98F8DD3-69B1-43BA-AFF5-4AE34CC5627E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C98F8DD3-69B1-43BA-AFF5-4AE34CC5627E}.Debug|x64.Build.0 = Debug|Any CPU
+		{C98F8DD3-69B1-43BA-AFF5-4AE34CC5627E}.Debug|x64.Deploy.0 = Debug|Any CPU
+		{C98F8DD3-69B1-43BA-AFF5-4AE34CC5627E}.Debug|x86.ActiveCfg = Debug|x86
+		{C98F8DD3-69B1-43BA-AFF5-4AE34CC5627E}.Debug|x86.Build.0 = Debug|x86
+		{C98F8DD3-69B1-43BA-AFF5-4AE34CC5627E}.Debug|x86.Deploy.0 = Debug|x86
+		{C98F8DD3-69B1-43BA-AFF5-4AE34CC5627E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C98F8DD3-69B1-43BA-AFF5-4AE34CC5627E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C98F8DD3-69B1-43BA-AFF5-4AE34CC5627E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C98F8DD3-69B1-43BA-AFF5-4AE34CC5627E}.Release|ARM.ActiveCfg = Release|ARM
+		{C98F8DD3-69B1-43BA-AFF5-4AE34CC5627E}.Release|ARM.Build.0 = Release|ARM
+		{C98F8DD3-69B1-43BA-AFF5-4AE34CC5627E}.Release|ARM.Deploy.0 = Release|ARM
+		{C98F8DD3-69B1-43BA-AFF5-4AE34CC5627E}.Release|x64.ActiveCfg = Release|Any CPU
+		{C98F8DD3-69B1-43BA-AFF5-4AE34CC5627E}.Release|x64.Build.0 = Release|Any CPU
+		{C98F8DD3-69B1-43BA-AFF5-4AE34CC5627E}.Release|x64.Deploy.0 = Release|Any CPU
+		{C98F8DD3-69B1-43BA-AFF5-4AE34CC5627E}.Release|x86.ActiveCfg = Release|x86
+		{C98F8DD3-69B1-43BA-AFF5-4AE34CC5627E}.Release|x86.Build.0 = Release|x86
+		{C98F8DD3-69B1-43BA-AFF5-4AE34CC5627E}.Release|x86.Deploy.0 = Release|x86
+		{ABB7584A-78C2-479A-8239-E94C165FEEDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABB7584A-78C2-479A-8239-E94C165FEEDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABB7584A-78C2-479A-8239-E94C165FEEDD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{ABB7584A-78C2-479A-8239-E94C165FEEDD}.Debug|ARM.ActiveCfg = Debug|ARM
+		{ABB7584A-78C2-479A-8239-E94C165FEEDD}.Debug|ARM.Build.0 = Debug|ARM
+		{ABB7584A-78C2-479A-8239-E94C165FEEDD}.Debug|ARM.Deploy.0 = Debug|ARM
+		{ABB7584A-78C2-479A-8239-E94C165FEEDD}.Debug|x64.ActiveCfg = Debug|x64
+		{ABB7584A-78C2-479A-8239-E94C165FEEDD}.Debug|x64.Build.0 = Debug|x64
+		{ABB7584A-78C2-479A-8239-E94C165FEEDD}.Debug|x64.Deploy.0 = Debug|x64
+		{ABB7584A-78C2-479A-8239-E94C165FEEDD}.Debug|x86.ActiveCfg = Debug|x86
+		{ABB7584A-78C2-479A-8239-E94C165FEEDD}.Debug|x86.Build.0 = Debug|x86
+		{ABB7584A-78C2-479A-8239-E94C165FEEDD}.Debug|x86.Deploy.0 = Debug|x86
+		{ABB7584A-78C2-479A-8239-E94C165FEEDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABB7584A-78C2-479A-8239-E94C165FEEDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABB7584A-78C2-479A-8239-E94C165FEEDD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{ABB7584A-78C2-479A-8239-E94C165FEEDD}.Release|ARM.ActiveCfg = Release|ARM
+		{ABB7584A-78C2-479A-8239-E94C165FEEDD}.Release|ARM.Build.0 = Release|ARM
+		{ABB7584A-78C2-479A-8239-E94C165FEEDD}.Release|ARM.Deploy.0 = Release|ARM
+		{ABB7584A-78C2-479A-8239-E94C165FEEDD}.Release|x64.ActiveCfg = Release|x64
+		{ABB7584A-78C2-479A-8239-E94C165FEEDD}.Release|x64.Build.0 = Release|x64
+		{ABB7584A-78C2-479A-8239-E94C165FEEDD}.Release|x64.Deploy.0 = Release|x64
+		{ABB7584A-78C2-479A-8239-E94C165FEEDD}.Release|x86.ActiveCfg = Release|x86
+		{ABB7584A-78C2-479A-8239-E94C165FEEDD}.Release|x86.Build.0 = Release|x86
+		{ABB7584A-78C2-479A-8239-E94C165FEEDD}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4A9322BB-B5D9-4784-893E-FE7C0DB273F4} = {5F581A7C-63A9-469E-B32C-527D0536B990}
+		{C98F8DD3-69B1-43BA-AFF5-4AE34CC5627E} = {5F581A7C-63A9-469E-B32C-527D0536B990}
+		{ABB7584A-78C2-479A-8239-E94C165FEEDD} = {5F581A7C-63A9-469E-B32C-527D0536B990}
+	EndGlobalSection
+EndGlobal
