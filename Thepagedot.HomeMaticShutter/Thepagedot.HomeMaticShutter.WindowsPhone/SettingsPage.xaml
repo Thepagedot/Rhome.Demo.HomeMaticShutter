@@ -27,8 +27,10 @@
             <TextBlock Text="settings" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
         </StackPanel>
 
-        <!--TODO: Content should be placed within the following grid-->
         <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            <Grid.DataContext>
+                <local:SettingsPage/>
+            </Grid.DataContext>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -40,8 +42,12 @@
             
             <!-- Shutter -->
             <TextBlock Text="Shutter" Grid.Row="1" Style="{StaticResource ControlHeaderTextBlockStyle}" Margin="0,20,0,0"/>
-            <ListView x:Name="lvShutters" Grid.Row="2" SelectionChanged="lvShutters_SelectionChanged" SelectionMode="Single">
-                
+            <ListView x:Name="lvShutters" Grid.Row="2" SelectionChanged="lvShutters_SelectionChanged" SelectionMode="Single" ItemsSource="{Binding Shutters}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="Test" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
         </Grid>
     </Grid>

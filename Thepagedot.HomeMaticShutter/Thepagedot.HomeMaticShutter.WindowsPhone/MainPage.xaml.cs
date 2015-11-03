@@ -28,7 +28,6 @@ namespace Thepagedot.HomeMaticShutter
         public MainPage()
         {
             this.InitializeComponent();
-
             this.NavigationCacheMode = NavigationCacheMode.Required;
         }
 

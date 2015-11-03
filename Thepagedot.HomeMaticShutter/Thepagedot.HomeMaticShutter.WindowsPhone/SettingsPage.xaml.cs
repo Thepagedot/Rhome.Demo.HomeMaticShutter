@@ -1,6 +1,7 @@
 ﻿using Thepagedot.HomeMaticShutter.Common;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -15,6 +16,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Thepagedot.Rhome.HomeMatic.Models;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
@@ -28,6 +30,8 @@ namespace Thepagedot.HomeMaticShutter
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
 
+        public ObservableCollection<Shutter> Shutters { get; set; }
+
         public SettingsPage()
         {
             this.InitializeComponent();
@@ -35,6 +39,8 @@ namespace Thepagedot.HomeMaticShutter
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += this.NavigationHelper_LoadState;
             this.navigationHelper.SaveState += this.NavigationHelper_SaveState;
+
+            Shutters = new ObservableCollection<Shutter> {new Shutter("Test Shutter", 0, 0, "")};
         }
 
         /// <summary>
