@@ -10,6 +10,7 @@ using Windows.UI.Xaml.Navigation;
 using Thepagedot.Rhome.HomeMatic.Services;
 using Thepagedot.Rhome.HomeMatic.Models;
 using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 
 // The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=234227
 
@@ -21,8 +22,8 @@ namespace Thepagedot.HomeMaticShutter
     public sealed partial class App : Application
     {
         public static HomeMaticXmlApi HomeMaticApi;
-        public static List<HomeMaticChannel> Shutters;
-        public static HomeMaticChannel CurrentShutter;
+        public static ObservableCollection<Shutter> Shutters;
+        public static Shutter CurrentShutter;
 
 #if WINDOWS_PHONE_APP
         private TransitionCollection transitions;
@@ -36,6 +37,7 @@ namespace Thepagedot.HomeMaticShutter
         {
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
+            Shutters = new ObservableCollection<Shutter>();
         }
 
         /// <summary>
@@ -143,7 +145,9 @@ namespace Thepagedot.HomeMaticShutter
                 {
                     var homeMaticDevice = device as HomeMaticDevice;
                     var channels = homeMaticDevice.ChannelList.Where(c => c.Type == 36);
-                    Shutters.AddRange(channels.ToList());
+
+                    foreach (var channel in channels)
+                        Shutters.Add((Shutter)channel);
                 }               
             }
         }

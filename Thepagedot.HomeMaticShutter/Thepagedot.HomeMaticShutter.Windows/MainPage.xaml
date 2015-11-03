@@ -8,6 +8,30 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+                
+        <TextBlock x:Name="pageTitle" Text="HomeMatic Switcher" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
+                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
 
+        <Grid Grid.Column="1" Grid.Row="1">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button x:Name="btnUp" Content="Up" Click="btnUp_Click" HorizontalAlignment="Stretch"/>
+                <Button x:Name="btnStop" Content="Stop" Click="btnStop_Click" HorizontalAlignment="Stretch"/>
+                <Button x:Name="btnDown" Content="Down" Click="btnDown_Click" HorizontalAlignment="Stretch"/>
+            </StackPanel>
+        </Grid>
     </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton x:Name="btnSettings" Label="Settings" Icon="Setting" Click="btnSettings_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
 </Page>

@@ -22,12 +22,11 @@ namespace Thepagedot.HomeMaticShutter
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class MainPage : Page
-    {
-        public Shutter Shutter;
-
+    {        
         public MainPage()
         {
             this.InitializeComponent();
+
             this.NavigationCacheMode = NavigationCacheMode.Required;
         }
 
@@ -45,44 +44,6 @@ namespace Thepagedot.HomeMaticShutter
             // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
-        }
-
-        private void btnSettings_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(SettingsPage));
-        }
-
-        private async void btnUp_Click(object sender, RoutedEventArgs e)
-        {
-            var button = (sender as Button);
-            if (button != null && App.HomeMaticApi != null)
-            {
-                button.IsEnabled = false;
-                await App.HomeMaticApi.SendChannelUpdateAsync(Shutter.IseId, 1);
-                button.IsEnabled = true;
-            }
-        }
-
-        private async void btnStop_Click(object sender, RoutedEventArgs e)
-        {
-            var button = (sender as Button);
-            if (button != null && App.HomeMaticApi != null)
-            {
-                button.IsEnabled = false;
-                await App.HomeMaticApi.SendChannelUpdateAsync(Shutter.StopIseId, 1);
-                button.IsEnabled = true;
-            }
-        }
-
-        private async void btnDown_Click(object sender, RoutedEventArgs e)
-        {
-            var button = (sender as Button);
-            if (button != null && App.HomeMaticApi != null)
-            {
-                button.IsEnabled = false;
-                await App.HomeMaticApi.SendChannelUpdateAsync(Shutter.IseId, 0);
-                button.IsEnabled = true;
-            }
-        }
+        }        
     }
 }
