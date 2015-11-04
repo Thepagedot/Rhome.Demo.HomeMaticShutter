@@ -10,12 +10,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thepagedot.HomeMaticShutter
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thepagedot.HomeMaticShutter.Windows", "Thepagedot.HomeMaticShutter\Thepagedot.HomeMaticShutter.Windows\Thepagedot.HomeMaticShutter.Windows.csproj", "{ABB7584A-78C2-479A-8239-E94C165FEEDD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Temp", "Temp", "{810D871E-657A-48AA-A971-E30E7E7FAEBD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thepagedot.Rhome.Base", "..\Rhome\HomeControl\Thepagedot.Rhome.Base\Thepagedot.Rhome.Base.csproj", "{FEF4C43A-4D06-477E-BE6F-8709EA321397}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thepagedot.Rhome.HomeMatic", "..\Rhome\HomeControl\Thepagedot.Rhome.HomeMatic\Thepagedot.Rhome.HomeMatic.csproj", "{EF0E99DF-41E4-4CB3-A6DB-B8D911E6A3BB}"
-EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Thepagedot.HomeMaticShutter\Thepagedot.HomeMaticShutter.Shared\Thepagedot.HomeMaticSwitcher.Shared.projitems*{c98f8dd3-69b1-43ba-aff5-4ae34cc5627e}*SharedItemsImports = 4
@@ -81,38 +75,6 @@ Global
 		{ABB7584A-78C2-479A-8239-E94C165FEEDD}.Release|x86.ActiveCfg = Release|x86
 		{ABB7584A-78C2-479A-8239-E94C165FEEDD}.Release|x86.Build.0 = Release|x86
 		{ABB7584A-78C2-479A-8239-E94C165FEEDD}.Release|x86.Deploy.0 = Release|x86
-		{FEF4C43A-4D06-477E-BE6F-8709EA321397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FEF4C43A-4D06-477E-BE6F-8709EA321397}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FEF4C43A-4D06-477E-BE6F-8709EA321397}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{FEF4C43A-4D06-477E-BE6F-8709EA321397}.Debug|ARM.Build.0 = Debug|Any CPU
-		{FEF4C43A-4D06-477E-BE6F-8709EA321397}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{FEF4C43A-4D06-477E-BE6F-8709EA321397}.Debug|x64.Build.0 = Debug|Any CPU
-		{FEF4C43A-4D06-477E-BE6F-8709EA321397}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{FEF4C43A-4D06-477E-BE6F-8709EA321397}.Debug|x86.Build.0 = Debug|Any CPU
-		{FEF4C43A-4D06-477E-BE6F-8709EA321397}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FEF4C43A-4D06-477E-BE6F-8709EA321397}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FEF4C43A-4D06-477E-BE6F-8709EA321397}.Release|ARM.ActiveCfg = Release|Any CPU
-		{FEF4C43A-4D06-477E-BE6F-8709EA321397}.Release|ARM.Build.0 = Release|Any CPU
-		{FEF4C43A-4D06-477E-BE6F-8709EA321397}.Release|x64.ActiveCfg = Release|Any CPU
-		{FEF4C43A-4D06-477E-BE6F-8709EA321397}.Release|x64.Build.0 = Release|Any CPU
-		{FEF4C43A-4D06-477E-BE6F-8709EA321397}.Release|x86.ActiveCfg = Release|Any CPU
-		{FEF4C43A-4D06-477E-BE6F-8709EA321397}.Release|x86.Build.0 = Release|Any CPU
-		{EF0E99DF-41E4-4CB3-A6DB-B8D911E6A3BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EF0E99DF-41E4-4CB3-A6DB-B8D911E6A3BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EF0E99DF-41E4-4CB3-A6DB-B8D911E6A3BB}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{EF0E99DF-41E4-4CB3-A6DB-B8D911E6A3BB}.Debug|ARM.Build.0 = Debug|Any CPU
-		{EF0E99DF-41E4-4CB3-A6DB-B8D911E6A3BB}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{EF0E99DF-41E4-4CB3-A6DB-B8D911E6A3BB}.Debug|x64.Build.0 = Debug|Any CPU
-		{EF0E99DF-41E4-4CB3-A6DB-B8D911E6A3BB}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{EF0E99DF-41E4-4CB3-A6DB-B8D911E6A3BB}.Debug|x86.Build.0 = Debug|Any CPU
-		{EF0E99DF-41E4-4CB3-A6DB-B8D911E6A3BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EF0E99DF-41E4-4CB3-A6DB-B8D911E6A3BB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EF0E99DF-41E4-4CB3-A6DB-B8D911E6A3BB}.Release|ARM.ActiveCfg = Release|Any CPU
-		{EF0E99DF-41E4-4CB3-A6DB-B8D911E6A3BB}.Release|ARM.Build.0 = Release|Any CPU
-		{EF0E99DF-41E4-4CB3-A6DB-B8D911E6A3BB}.Release|x64.ActiveCfg = Release|Any CPU
-		{EF0E99DF-41E4-4CB3-A6DB-B8D911E6A3BB}.Release|x64.Build.0 = Release|Any CPU
-		{EF0E99DF-41E4-4CB3-A6DB-B8D911E6A3BB}.Release|x86.ActiveCfg = Release|Any CPU
-		{EF0E99DF-41E4-4CB3-A6DB-B8D911E6A3BB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -121,7 +83,5 @@ Global
 		{4A9322BB-B5D9-4784-893E-FE7C0DB273F4} = {5F581A7C-63A9-469E-B32C-527D0536B990}
 		{C98F8DD3-69B1-43BA-AFF5-4AE34CC5627E} = {5F581A7C-63A9-469E-B32C-527D0536B990}
 		{ABB7584A-78C2-479A-8239-E94C165FEEDD} = {5F581A7C-63A9-469E-B32C-527D0536B990}
-		{FEF4C43A-4D06-477E-BE6F-8709EA321397} = {810D871E-657A-48AA-A971-E30E7E7FAEBD}
-		{EF0E99DF-41E4-4CB3-A6DB-B8D911E6A3BB} = {810D871E-657A-48AA-A971-E30E7E7FAEBD}
 	EndGlobalSection
 EndGlobal
