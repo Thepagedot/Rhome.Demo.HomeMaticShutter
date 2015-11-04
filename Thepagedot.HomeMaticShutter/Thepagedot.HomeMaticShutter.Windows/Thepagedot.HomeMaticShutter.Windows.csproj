@@ -136,6 +136,19 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Thepagedot.Rhome.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Thepagedot.Rhome.HomeMatic.0.0.2-beta\lib\Thepagedot.Rhome.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Thepagedot.Rhome.HomeMatic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Thepagedot.Rhome.HomeMatic.0.0.2-beta\lib\Thepagedot.Rhome.HomeMatic.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="..\Thepagedot.HomeMaticShutter.Shared\Thepagedot.HomeMaticSwitcher.Shared.projitems" Label="Shared" />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
