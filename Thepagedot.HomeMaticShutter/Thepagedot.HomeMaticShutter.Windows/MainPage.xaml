@@ -21,11 +21,13 @@
                         IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
 
         <Grid Grid.Column="1" Grid.Row="1">
-            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Button x:Name="btnUp" Content="Up" Click="btnUp_Click" HorizontalAlignment="Stretch"/>
-                <Button x:Name="btnStop" Content="Stop" Click="btnStop_Click" HorizontalAlignment="Stretch"/>
-                <Button x:Name="btnDown" Content="Down" Click="btnDown_Click" HorizontalAlignment="Stretch"/>
-            </StackPanel>
+            <Border HorizontalAlignment="Center" VerticalAlignment="Center" Padding="40" Background="{ThemeResource AppBarSeparatorForegroundThemeBrush}">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button x:Name="btnUp" Content="Up" Click="btnUp_Click" HorizontalAlignment="Stretch" Padding="40,10"/>
+                    <Button x:Name="btnStop" Content="Stop" Click="btnStop_Click" HorizontalAlignment="Stretch"  Padding="40,10"/>
+                    <Button x:Name="btnDown" Content="Down" Click="btnDown_Click" HorizontalAlignment="Stretch"  Padding="40,10"/>
+                </StackPanel>
+            </Border>
         </Grid>
     </Grid>
 

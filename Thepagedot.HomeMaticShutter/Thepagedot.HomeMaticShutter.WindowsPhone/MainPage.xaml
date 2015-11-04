@@ -29,11 +29,13 @@
 
         <!--TODO: Content should be placed within the following grid-->
         <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
-            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Button x:Name="btnUp" Content="Up" Click="btnUp_Click"/>
-                <Button x:Name="btnStop" Content="Stop" Click="btnStop_Click"/>
-                <Button x:Name="btnDown" Content="Down" Click="btnDown_Click"/>
-            </StackPanel>
+            <Border HorizontalAlignment="Center" VerticalAlignment="Center" Padding="40" Background="{ThemeResource CommandBarBackgroundThemeBrush}">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button x:Name="btnUp" Content="Up" Click="btnUp_Click"/>
+                    <Button x:Name="btnStop" Content="Stop" Click="btnStop_Click"/>
+                    <Button x:Name="btnDown" Content="Down" Click="btnDown_Click"/>
+                </StackPanel>
+            </Border>
         </Grid>
     </Grid>
 
