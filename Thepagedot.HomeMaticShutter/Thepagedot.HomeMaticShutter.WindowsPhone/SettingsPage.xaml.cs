@@ -38,7 +38,7 @@ namespace Thepagedot.HomeMaticShutter
             this.navigationHelper.LoadState += this.NavigationHelper_LoadState;
             this.navigationHelper.SaveState += this.NavigationHelper_SaveState;
 
-            DataContext = App.Shutters;
+            DataContext = App.Channels;
         }
 
         /// <summary>

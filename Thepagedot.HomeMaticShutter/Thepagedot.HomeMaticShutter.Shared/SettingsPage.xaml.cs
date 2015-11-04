@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using Thepagedot.Rhome.HomeMatic.Models;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
@@ -18,30 +19,49 @@ namespace Thepagedot.HomeMaticShutter
         {
             navigationHelper.OnNavigatedTo(e);
 
-            App.Shutters.Add(new Shutter("Test Shutter", 0, 0, ""));
-            lvShutters.ItemsSource = App.Shutters;
+            if (App.Address != null)
+                tbxCcuAddress.Text = App.Address;
+
+            //App.Channels.Add(new Shutter("Test Shutter", 0, 0, ""));
+            lvShutters.ItemsSource = App.Channels;
 
             if (App.CurrentShutter != null)
             {
-                var index = App.Shutters.IndexOf(App.CurrentShutter);
+                var index = App.Channels.IndexOf(App.CurrentShutter);
                 lvShutters.SelectedIndex = index;
             }
         }
 
         private async void tbxCcuAddress_LostFocus(object sender, RoutedEventArgs e)
         {
-            await App.InitHomeMatic((sender as TextBox).Text);
-            if (App.Shutters.Any())
+            var text = (sender as TextBox).Text;
+            if (text.Length == 0)
+                return;
+
+            await App.InitHomeMatic(text);
+            if (App.Channels.Any())
             {
-                lvShutters.ItemsSource = App.Shutters;
+                lvShutters.ItemsSource = App.Channels;
             }
         }
 
-        private void lvShutters_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private async void lvShutters_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var selectedIndex = (sender as ListView).SelectedIndex;
             if (selectedIndex != -1)
-                App.CurrentShutter = App.Shutters.ElementAt(selectedIndex);
+            {
+                if (App.Channels.ElementAt(selectedIndex) is Shutter)
+                {
+                    App.CurrentShutter = (Shutter)App.Channels.ElementAt(selectedIndex);
+                }
+                else
+                {
+                    var dialog = new MessageDialog("The device you selected is not a shutter. Please select a shutter to control.", "Select a shutter");
+                    await dialog.ShowAsync();
+                    (sender as ListView).SelectedIndex = -1;
+                }
+            }
+                
         }
     }
 }

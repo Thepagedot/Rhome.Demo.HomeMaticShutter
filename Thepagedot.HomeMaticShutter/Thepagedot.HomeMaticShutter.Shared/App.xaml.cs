@@ -11,6 +11,8 @@ using Thepagedot.Rhome.HomeMatic.Services;
 using Thepagedot.Rhome.HomeMatic.Models;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
+using Windows.Storage;
+using Windows.UI.Popups;
 
 // The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=234227
 
@@ -22,8 +24,9 @@ namespace Thepagedot.HomeMaticShutter
     public sealed partial class App : Application
     {
         public static HomeMaticXmlApi HomeMaticApi;
-        public static ObservableCollection<Shutter> Shutters;
+        public static ObservableCollection<HomeMaticChannel> Channels;
         public static Shutter CurrentShutter;
+        public static string Address;
 
 #if WINDOWS_PHONE_APP
         private TransitionCollection transitions;
@@ -37,7 +40,11 @@ namespace Thepagedot.HomeMaticShutter
         {
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
-            Shutters = new ObservableCollection<Shutter>();
+            Channels = new ObservableCollection<HomeMaticChannel>();
+
+            // Restore IP address
+            if (ApplicationData.Current.LocalSettings.Values.ContainsKey("address"))
+                Address = (string)ApplicationData.Current.LocalSettings.Values["address"];
         }
 
         /// <summary>
@@ -69,7 +76,7 @@ namespace Thepagedot.HomeMaticShutter
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
-                    // TODO: Load state from previously suspended application
+                    
                 }
 
                 // Place the frame in the current Window
@@ -137,18 +144,29 @@ namespace Thepagedot.HomeMaticShutter
 
         public static async Task InitHomeMatic(string address)
         {
+            // Save address
+            ApplicationData.Current.LocalSettings.Values["address"] = address;
+
+            // Init API
             HomeMaticApi = new HomeMaticXmlApi(new Ccu("HomeMatic CCU", address));
             if (await HomeMaticApi.CheckConnectionAsync())
             {
+                Channels.Clear();
+
                 var devices = await HomeMaticApi.GetDevicesAsync();
                 foreach(var device in devices)
                 {
                     var homeMaticDevice = device as HomeMaticDevice;
-                    var channels = homeMaticDevice.ChannelList.Where(c => c.Type == 36);
-
-                    foreach (var channel in channels)
-                        Shutters.Add((Shutter)channel);
+                    foreach (var channel in homeMaticDevice.ChannelList)
+                    {
+                        Channels.Add(channel);
+                    }
                 }               
+            }
+            else
+            {
+                var dialog = new MessageDialog("Could not connect to your HomeMatic Central", "Connection Error");
+                await dialog.ShowAsync();
             }
         }
     }

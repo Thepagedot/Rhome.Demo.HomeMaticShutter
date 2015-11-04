@@ -119,7 +119,6 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Logo.scale-100.png" />
@@ -138,14 +137,14 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Thepagedot.Rhome.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Thepagedot.Rhome.HomeMatic.0.0.2-beta\lib\Thepagedot.Rhome.Base.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Thepagedot.Rhome.HomeMatic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Thepagedot.Rhome.HomeMatic.0.0.2-beta\lib\Thepagedot.Rhome.HomeMatic.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
+    <ProjectReference Include="..\..\..\Rhome\HomeControl\Thepagedot.Rhome.Base\Thepagedot.Rhome.Base.csproj">
+      <Project>{fef4c43a-4d06-477e-be6f-8709ea321397}</Project>
+      <Name>Thepagedot.Rhome.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Rhome\HomeControl\Thepagedot.Rhome.HomeMatic\Thepagedot.Rhome.HomeMatic.csproj">
+      <Project>{ef0e99df-41e4-4cb3-a6db-b8d911e6a3bb}</Project>
+      <Name>Thepagedot.Rhome.HomeMatic</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="..\Thepagedot.HomeMaticShutter.Shared\Thepagedot.HomeMaticSwitcher.Shared.projitems" Label="Shared" />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
